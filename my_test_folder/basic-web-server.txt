@@ -1,0 +1,17 @@
+To Configure Basic Web Server In Linux Ec2 Instance 
+-> We need to access the ec2 instance 
+-> Login as a root user (or) use sudo user 
+step 1 
+-> install the req package 
+-> #yum install httpd* -y 
+step 2 
+-> deploy the Web Application in Server (Ec2 instance)  
+-> #vim /var/www/html/index.html (index.html is web applicetion or site) 
+-> #echo "This is a Test Web Site...." > /var/www/html/index.html 
+step 3 
+-> start and enable web service 
+-> #systemctl start httpd 
+-> #systemctl enable httpd 
+step 4 
+-> in Ec2 we need to add http (80) protocal in to security group (it well act as a firewall) 
+-> go to ec2 security tab add 80 port no in to inbound traffic 
